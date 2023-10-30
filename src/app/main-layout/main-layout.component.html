@@ -1,0 +1,24 @@
+<div class="row m-0">
+  <div class="col-2 bg-white h-100 m-0 py-3" style="border-radius: 19px !important;">
+    <div class="row">
+      <img src="../../assets/image/logo.png" alt="" style="width: 200px !important;" class="mx-auto">
+    </div>
+
+    <div *ngFor="let item of items" class="my-5 px-3">
+      <span class="btn-menu">
+        <i class="{{item.icon}} me-3"></i> {{item.label}}
+      </span>
+    </div>
+
+    <div class="my-5 px-3">
+      <span class="btn-menu d-flex">
+        <i class="pi pi-moon me-3"></i> Modo oscuro
+        <p-inputSwitch [(ngModel)]="modoOscuro" class="ms-3"></p-inputSwitch>
+      </span>
+    </div>
+
+  </div>
+  <div class="col-10 bg-secondary h m-0 p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
